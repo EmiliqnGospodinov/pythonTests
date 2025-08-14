@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "@playwright/test": "^1.54.2"
+  },
+  "devDependencies": {
+    "@chromatic-com/playwright": "^0.12.6",
+    "chromatic": "^13.1.3"
   }
 }

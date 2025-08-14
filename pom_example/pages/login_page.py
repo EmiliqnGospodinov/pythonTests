@@ -11,9 +11,9 @@ class LoginPage(BasePage):
         self.banner: Locator = page.locator("#site-header")
         self.failure_message = page.locator("#error")
 
-    def visit(self, url: str):
+    def open(self):
         """Navigate to the login page."""
-        self.page.goto(url)
+        self.goto("/practice-test-login")
 
     def login(self, username: str, password: str):
         """Fill in credentials and submit the form."""

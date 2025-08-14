@@ -1,11 +1,13 @@
 from playwright.sync_api import Page
+from pom_example.config.config import BASE_URL
 
 class BasePage:
     def __init__(self, page: Page):
         self.page = page
 
-    def visit(self, url: str):
-        self.page.goto(url)
+    def goto(self, path: str = ""):
+        full_url = f"{BASE_URL.rstrip('/')}/{path.lstrip('/')}"
+        self.page.goto(full_url)
 
     def get_title(self):
         return self.page.title()
